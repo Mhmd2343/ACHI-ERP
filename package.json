@@ -1,7 +1,5 @@
 {
-  "home": "https://github.com/Mhmd2343/ACHI-ERP",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
+  "homepage": "https://mhmd2343.github.io/ACHI-ERP",
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
@@ -13,7 +11,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
