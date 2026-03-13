@@ -28,7 +28,6 @@ const statusColors: Record<string, { bg: string; color: string }> = {
 
 export default function StatusChip({ status }: { status: string }) {
   const colors = statusColors[status] || { bg: '#F1F5F9', color: '#475569' };
-
   return (
     <Chip
       label={status}
