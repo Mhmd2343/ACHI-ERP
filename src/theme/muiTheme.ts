@@ -2,100 +2,145 @@ import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
-      main: '#28509E',
-      light: '#4A72B8',
-      dark: '#1C3A73',
-      contrastText: '#FFFFFF',
+      main: '#F2A100',
+      light: '#FFB52E',
+      dark: '#C98500',
+      contrastText: '#050505',
     },
     secondary: {
-      main: '#F0F2F5',
-      dark: '#E0E3E8',
-      contrastText: '#1A2332',
+      main: '#090909',
+      light: '#111111',
+      dark: '#050505',
+      contrastText: '#F5F1E8',
     },
     success: {
-      main: '#22C55E',
-      light: '#86EFAC',
+      main: '#20C05C',
     },
     warning: {
-      main: '#F59E0B',
-      light: '#FCD34D',
+      main: '#F2A100',
     },
     error: {
-      main: '#EF4444',
-      light: '#FCA5A5',
+      main: '#F04A3A',
     },
     info: {
-      main: '#0EA5E9',
-      light: '#7DD3FC',
+      main: '#F6F3EC',
     },
     background: {
-      default: '#F5F6FA',
-      paper: '#FFFFFF',
+      default: '#050505',
+      paper: '#0A0A0A',
     },
     text: {
-      primary: '#1A2332',
-      secondary: '#64748B',
+      primary: '#F5F1E8',
+      secondary: '#7A7468',
     },
-    divider: '#E2E8F0',
+    divider: 'rgba(255, 184, 0, 0.08)',
   },
   typography: {
-    fontFamily: "'Inter', sans-serif",
-    h4: { fontWeight: 700, fontSize: '1.5rem' },
-    h5: { fontWeight: 600, fontSize: '1.25rem' },
-    h6: { fontWeight: 600, fontSize: '1rem' },
-    subtitle1: { fontWeight: 500 },
-    subtitle2: { fontWeight: 500, color: '#64748B' },
-    body2: { color: '#64748B' },
+    fontFamily: "'Oxanium', sans-serif",
+    h4: {
+      fontFamily: "'Oxanium', sans-serif",
+      fontWeight: 700,
+      fontSize: '1.55rem',
+      lineHeight: 1,
+      letterSpacing: '0.01em',
+      textTransform: 'uppercase',
+    },
+    h5: {
+      fontFamily: "'Oxanium', sans-serif",
+      fontWeight: 700,
+      fontSize: '1rem',
+      lineHeight: 1,
+      letterSpacing: '0.04em',
+      textTransform: 'uppercase',
+    },
+    h6: {
+      fontFamily: "'Oxanium', sans-serif",
+      fontWeight: 700,
+      fontSize: '0.88rem',
+      lineHeight: 1,
+      letterSpacing: '0.08em',
+      textTransform: 'uppercase',
+    },
+    subtitle1: {
+      fontFamily: "'Oxanium', sans-serif",
+      fontWeight: 600,
+      letterSpacing: '0.06em',
+      textTransform: 'uppercase',
+    },
+    subtitle2: {
+      fontFamily: "'IBM Plex Mono', monospace",
+      fontWeight: 500,
+      fontSize: '0.72rem',
+      letterSpacing: '0.08em',
+      textTransform: 'uppercase',
+      color: '#7A7468',
+    },
+    body1: {
+      fontFamily: "'IBM Plex Mono', monospace",
+      fontSize: '0.82rem',
+      color: '#D9D2C5',
+    },
+    body2: {
+      fontFamily: "'IBM Plex Mono', monospace",
+      fontSize: '0.74rem',
+      color: '#7A7468',
+    },
+    button: {
+      fontFamily: "'Oxanium', sans-serif",
+      fontWeight: 700,
+      letterSpacing: '0.06em',
+      textTransform: 'none',
+    },
   },
   shape: {
-    borderRadius: 8,
+    borderRadius: 0,
   },
   components: {
-    MuiButton: {
+    MuiCssBaseline: {
       styleOverrides: {
-        root: {
-          textTransform: 'none',
-          fontWeight: 600,
-          borderRadius: 8,
+        html: {
+          backgroundColor: '#050505',
         },
-      },
-    },
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          boxShadow: '0 1px 3px rgba(0,0,0,0.08)',
-          borderRadius: 12,
-          border: '1px solid #E2E8F0',
-        },
-      },
-    },
-    MuiTableHead: {
-      styleOverrides: {
-        root: {
-          '& .MuiTableCell-head': {
-            fontWeight: 600,
-            backgroundColor: '#F8FAFC',
-            color: '#475569',
-            fontSize: '0.8125rem',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
-          },
-        },
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          fontWeight: 500,
-          fontSize: '0.75rem',
+        body: {
+          backgroundColor: '#050505',
+          color: '#F5F1E8',
         },
       },
     },
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          border: 'none',
+          borderRight: '1px solid rgba(255, 184, 0, 0.08)',
+          background: '#080808',
+          backgroundImage: 'none',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          background: '#0A0A0A',
+          border: '1px solid rgba(255, 184, 0, 0.08)',
+          borderRadius: 0,
+          boxShadow: 'none',
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundImage: 'none',
+          borderRadius: 0,
+          boxShadow: 'none',
+        },
+      },
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          borderColor: 'rgba(255, 184, 0, 0.08)',
         },
       },
     },
