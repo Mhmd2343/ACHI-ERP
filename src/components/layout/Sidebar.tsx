@@ -23,6 +23,7 @@ import {
   Settings,
   Logout,
   Inventory2,
+  FolderOpen,
 } from '@mui/icons-material';
 
 const DRAWER_WIDTH = 260;

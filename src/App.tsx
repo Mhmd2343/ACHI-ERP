@@ -16,12 +16,21 @@ import LoginPage from './pages/LoginPage';
 import InventoryPage from './pages/InventoryPage';
 import NotFound from './pages/NotFound';
 
+// CRM imports
+import CRMPage from './pages/CRMPage';
+import NewLeadPage from './pages/NewLeadPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ProjectDetailsPage from './pages/ProjectDetailsPage';
+import JobOrdersPage from './pages/JobOrdersPage';
+import InvoicesPage from './pages/InvoicesPage';
+
 const App = () => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
     <HashRouter>
       <Routes>
         <Route path="/login" element={<LoginPage />} />
+
         <Route element={<AppLayout />}>
           <Route path="/" element={<DashboardPage />} />
           <Route path="/leads" element={<LeadsPage />} />
@@ -33,7 +42,16 @@ const App = () => (
           <Route path="/quotations" element={<QuotationsPage />} />
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/settings" element={<SettingsPage />} />
+
+          {/* CRM routes */}
+          <Route path="/crm" element={<CRMPage />} />
+          <Route path="/crm/new" element={<NewLeadPage />} />
+          <Route path="/crm/projects" element={<ProjectsPage />} />
+          <Route path="/crm/projects/:id" element={<ProjectDetailsPage />} />
+          <Route path="/crm/job-orders" element={<JobOrdersPage />} />
+          <Route path="/crm/invoices" element={<InvoicesPage />} />
         </Route>
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>
